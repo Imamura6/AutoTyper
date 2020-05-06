@@ -2,6 +2,7 @@
 Basic code that implements pynput to auto type a pre defined text
 """
 
+import os
 import time
 from pynput.keyboard import Key, Controller
 
@@ -47,5 +48,9 @@ class AutoTyper():
 
 if __name__ == "__main__":
     time.sleep(3)
+    TEXT_FILE_NAME = "test"
+    SCRIPT_PATH = os.path.realpath(__file__)
+    SCRIPT_DIR = os.path.dirname(SCRIPT_PATH)
+    TEXT_FILE_PATH = os.path.join(SCRIPT_DIR, TEXT_FILE_NAME)
     AUTO_TYPER = AutoTyper()
-    AUTO_TYPER.type_text_file("./test")
+    AUTO_TYPER.type_text_file(TEXT_FILE_PATH)
