@@ -25,7 +25,7 @@ class AutoTyper():
 
     def type_sentence(self, sentence):
         """
-        Function that types a sentence in a window that is selected
+        Function that types a sentence in the selected window
         """
         for char in sentence:
             if char in ('\r', '\n', '\r\n'):
@@ -38,7 +38,7 @@ class AutoTyper():
 
     def type_text_file(self, file_path):
         """
-        Function that types all the content of a text file in the window that is selected
+        Function that types all the content of a text file in the selected window
         """
         with open(file_path, 'r') as file:
             for line in file:
